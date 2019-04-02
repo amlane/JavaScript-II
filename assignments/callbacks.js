@@ -24,27 +24,58 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 */
 
-
 function getLength(arr, cb) {
-  // getLength passes the length of the array into the callback.
+  return cb(arr.length);// getLength passes the length of the array into the callback.
 }
+
+getLength(items, function(length){
+  console.log(length);
+})
+
 
 function last(arr, cb) {
-  // last passes the last item of the array into the callback.
+  return cb(arr[arr.length-1]);// last passes the last item of the array into the callback.
 }
+
+last(items, function(last){
+  console.log(last);
+})
 
 function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x + y);// sumNums adds two numbers (x, y) and passes the result to the callback.
 }
+
+sumNums(3, 4, function(sum){
+  console.log(sum);
+})
 
 function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb(x*y);// multiplyNums multiplies two numbers and passes the result to the callback.
 }
 
-function contains(item, list, cb) {
+multiplyNums(11, 5, function(product){
+  console.log(product);
+})
+
+function contains(test, arr, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
+
+contains("Gum", items, function(doesItContain){
+  console.log(doesItContain);
+});
+
+
+// var words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
+// const result = words.filter(word => word.length > 6);
+// console.log(result);
+
+// let BMWAndAudi = inventory.filter(
+//   inventory => inventory.car_make === "BMW" || inventory.car_make === "Audi"
+// );
+// console.log(BMWAndAudi);
+
 
 /* STRETCH PROBLEM */
 
