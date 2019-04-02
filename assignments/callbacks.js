@@ -58,24 +58,17 @@ multiplyNums(11, 5, function(product){
 })
 
 function contains(test, arr, cb) {
+  return cb(arr.some(function(item) { 
+    return item === test;
+  }));
+  
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
 
-contains("Gum", items, function(doesItContain){
+contains("books", items, function(doesItContain){
   console.log(doesItContain);
-});
-
-
-// var words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
-// const result = words.filter(word => word.length > 6);
-// console.log(result);
-
-// let BMWAndAudi = inventory.filter(
-//   inventory => inventory.car_make === "BMW" || inventory.car_make === "Audi"
-// );
-// console.log(BMWAndAudi);
-
+}); //coming back to this question after working on array-methods
 
 /* STRETCH PROBLEM */
 
