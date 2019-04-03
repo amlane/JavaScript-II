@@ -68,11 +68,12 @@ function contains(test, arr, cb) {
 
 contains("books", items, function(doesItContain){
   console.log(doesItContain);
-}); //coming back to this question after working on array-methods
+}); 
 
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
+  
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.

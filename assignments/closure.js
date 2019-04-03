@@ -2,13 +2,15 @@
 // Write a simple closure of your own creation.  Keep it simple!
 
 function parent() {
-  console.log("I'm the momma!");
+  const parentName = "Karen";
+  console.log(`I'm the parent, my name is ${parentName}!`);
 
   function child() {
-    console.log("I'm the child!");
+    const childName = "Amanda";
+    console.log(`I'm the child of ${parentName}, my name is ${childName}!`);
 
     function grandchild() {
-      console.log("I'm the grandchild!");
+      console.log(`I'm the grandchild of ${parentName} and the child of ${childName}!`);
     };
     grandchild();
   };
