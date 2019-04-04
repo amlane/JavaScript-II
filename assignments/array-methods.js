@@ -93,3 +93,6 @@ console.log(companyList);
 const runnersBlurb = [];
 runners.forEach(item => runnersBlurb.push(`${item.first_name} ${item.last_name} works for ${item.company_name} and wears a size ${item.shirt_size}. You can reach them at ${item.email}!`));
 console.log(runnersBlurb);
+
+const newRunnersBlurb = runners.map(x => x.first_name + x.last_name + ` works for ` + x.company_name + ` and wears a size ` + x.shirt_size + `. You can reach them at ` + x.email + `!`);
+console.log(newRunnersBlurb);
