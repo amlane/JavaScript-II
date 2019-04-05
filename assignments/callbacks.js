@@ -50,17 +50,14 @@ sumNums(3, 4, function(sum){
 })
 
 function multiplyNums(x, y, cb) {
-  return cb(x*y);// multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb(x * y);// multiplyNums multiplies two numbers and passes the result to the callback.
 }
 
-multiplyNums(11, 5, function(product){
+multiplyNums(10, 5, function(product){
   console.log(product);
 })
 
 function contains(test, arr, cb) {
-  // return cb(arr.some(function(item) { 
-  //   return item === test;
-  // }));
   return cb(arr.includes(test));
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
@@ -82,3 +79,25 @@ function removeDuplicates(array, cb) {
 removeDuplicates(items, function(isItDuplicate){
   console.log(isItDuplicate);
 });
+
+
+function tellMeMyFortune(name, cb){
+  let yourFuture = Math.random()
+  if (yourFuture < 0.3) {
+  return cb(`${name} will become a millionaire!`);
+  } else if (yourFuture > 0.6){
+    return cb(`${name} will find their soulmate!`);
+  } else {
+    return cb(`${name} will be cursed for eternity!`)
+  }
+}
+
+tellMeMyFortune("Amanda", function(myFuture){
+  console.log(myFuture);
+})
+tellMeMyFortune("Steven", function(myFuture){
+  console.log(myFuture);
+})
+tellMeMyFortune("Shian", function(myFuture){
+  console.log(myFuture);
+})
